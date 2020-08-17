@@ -4,29 +4,31 @@
 <!--      <router-link to="/">Home</router-link>-->
 <!--      <router-link to="/about">About</router-link>-->
 <!--    </div>-->
+    <!--  Header  -->
+    <my-header></my-header>
+    <!--  分頁  -->
     <router-view/>
+    <!--  Footer  -->
+    <my-footer></my-footer>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import myHeader from '@/components/my-header'
+import myFooter from '@/components/my-footer'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'app',
+  components: {
+    myHeader,
+    myFooter
   }
+}
+</script>
+
+<style lang="scss" scoped>
+#app {
+  width: 100%;
+  height: 100%;
 }
 </style>

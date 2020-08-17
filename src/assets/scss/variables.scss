@@ -1,0 +1,24 @@
+$i-view-lg-screen-width: 991px;
+$i-view-sm-screen-width: 575px;
+$header-height: 60px;
+$header-scroll-top-height: 100px;
+$mobile-header-height: 60px;
+
+// img配合寬度
+@mixin img-follow-width {
+  width: 100%;
+  height: auto;
+}
+
+// img配合高度
+@mixin img-follow-height {
+  width: auto;
+  height: 100%;
+}
+
+// 功能 icon
+@mixin feature-icon {
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
