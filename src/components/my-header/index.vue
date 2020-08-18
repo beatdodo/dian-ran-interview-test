@@ -1,6 +1,5 @@
 <template>
   <div class="my-header" :class="{'scroll-top': isScrollToTop, 'mobile': isMobile}">
-<!--    <div class="bg" :class="{'mobile': isMobile}"></div>-->
     <Row type="flex" justify="space-between" style="height: 100%">
       <Col :span="4" :lg="6" style="text-align: left">
         <!--  聯絡資訊 or Logo  -->
@@ -119,12 +118,12 @@ export default {
     onScroll (e) {
       const windowTop = e.target.documentElement.scrollTop
       if (windowTop >= 0) this.setWindowTop(e.target.documentElement.scrollTop)
-      console.log(this.windowTop)
+      // console.log(this.windowTop)
     },
     onResize () {
       const scrollWidth = document.body.scrollWidth
       if (scrollWidth >= 0) this.setScrollWidth(scrollWidth)
-      console.log(this.scrollWidth)
+      // console.log(this.scrollWidth)
     },
     routerToHome () {
       this.$router.push({ name: 'home' })
@@ -165,24 +164,6 @@ $mobile-header-bg-color: #eaeaea;
     height: $mobile-header-height;
   }
 }
-
-//.bg {
-//  width: 100%;
-//  height: 100%;
-//  position: absolute;
-//  left: 0;
-//  right: 0;
-//  top: 0;
-//  bottom: 0;
-//  background-color: $header-bg-color;
-//  opacity: .9;
-//  z-index: -1;
-//
-//  &.mobile {
-//    background-color: $mobile-header-bg-color;
-//    opacity: 1;
-//  }
-//}
 
 .contact-info {
   min-width: 260px;

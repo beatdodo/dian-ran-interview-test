@@ -79,6 +79,11 @@ export default {
   margin-bottom: 14px;
   cursor: pointer;
 
+  @media screen and (max-width: $i-view-sm-screen-width) {
+    max-height: 150px;
+    overflow: hidden;
+  }
+
   img {
     width: 100%;
   }
@@ -92,6 +97,10 @@ export default {
     position: absolute;
     bottom: 5px;
     background-color: rgba(95, 58, 22, 0.75);
+
+    @media screen and (max-width: $i-view-sm-screen-width) {
+      bottom: 0;
+    }
 
     .title {
       font-size: 20px;
